@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6v95CahU1UeeX7nX+5+utAAAAAACAAAAAAAQZgAAAAEAACAAAACe+zOsNYhhyVoHS9cGKv1wr74eyreRM39GxsjaaytFOQAAAAAOgAAAAAIAACAAAADy/XTavZKcIhc4tSChtxFP+HI1SWi5iDxr161Jbr9n/IAAAADeoMn2RsGw4o13cX+uTbuE06OTebkYcuMQtFPgPtMl9gCmsBRBgv4qFzb+TWy9vMnTaho7pNoJJGxclcKh1Coy4VI23uT6hXYM2IhPqmhTwaPgB4my1es4mFLcXBgi//aiq9FJaq/7xjatLt6nckCP5falw4BROYOtoW5F/tw9JUAAAAAiVL7vsE25LzDJnyZepjphdWJHUmJcO8ViAgSAMkF9Tjn7LQG4JYKkRxLj6LYbuPxddY1hh15pS5QAuTKoBdxw</EncryptedPassword>
+    <History>False|2023-10-10T07:50:27.7819310Z;False|2023-10-10T14:48:31.9010176+07:00;False|2023-10-10T14:47:56.5019968+07:00;False|2023-10-10T14:46:16.5081089+07:00;True|2023-10-10T14:23:04.9851637+07:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="StudentManagementContext">
+      <Value>Server=%28localdb%29\mssqllocaldb%3bDatabase=StudentManagementApi.Data%3bTrusted_Connection=True%3bMultipleActiveResultSets=true</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="StudentManagementApi.Data.StudentManagementContext">
+      <Value>Server=%28localdb%29\mssqllocaldb%3bDatabase=StudentManagementApi.Data%3bTrusted_Connection=True%3bMultipleActiveResultSets=true</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>
