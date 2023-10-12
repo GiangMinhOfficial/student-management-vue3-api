@@ -39,7 +39,8 @@ namespace StudentManagementApi.Services.StudentService
             return student;
         }
 
-        public async Task<IQueryable<Student>> GetStudents(string? search, string? fromDate, string? toDate, string? order = "", int page = 1, int pageSize = 4)
+        public async Task<IQueryable<Student>> GetStudents(string? search, string? fromDate, string? toDate, bool? gender, int? departmentId,
+            string? order = "", int page = 1, int pageSize = 4)
         {
             var students = _context.Student
                 .AsNoTracking()
@@ -73,6 +74,16 @@ namespace StudentManagementApi.Services.StudentService
             if (!string.IsNullOrEmpty(toDate))
             {
                 students = students.Where(s => s.Birthdate <= DateTime.Parse(toDate));
+            }
+
+            if (gender.HasValue)
+            {
+                students = students.Where(s => s.Gender == gender.Value);
+            }
+
+            if (departmentId.HasValue)
+            {
+                students = students.Where(s => s.Department.DepartmentId == departmentId.Value);
             }
             #endregion
 

@@ -18,9 +18,10 @@ namespace StudentManagementApi.Controllers
 
         // GET: api/Students
         [HttpGet]
-        public async Task<IActionResult> GetStudent(string? search, string? fromDate, string? toDate, string? order = "", int page = 1, int pageSize = 4)
+        public async Task<IActionResult> GetStudent(string? search, string? fromDate, string? toDate, bool? gender, int? departmentId,
+            string? order = "", int page = 1, int pageSize = 4)
         {
-            var students = await _studentService.GetStudents(search, fromDate, toDate, order, page, pageSize);
+            var students = await _studentService.GetStudents(search, fromDate, toDate, gender, departmentId, order, page, pageSize);
 
             var result = PaginatedList<Student>.Create(students, page, pageSize);
 
